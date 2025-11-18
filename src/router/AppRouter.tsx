@@ -1,9 +1,10 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "../pages/Layout.tsx";
-import Home from "../pages/home/Home.tsx";
+
 import Configuation from "../utils/Configuation.ts";
-import Store from "../pages/store/Store.tsx";
-import Contact from "../pages/contact/Contact.tsx";
+
+import Discord from "../pages/Discord.tsx";
+import Maintenance from "../pages/Maintenance.tsx";
 
 const AppRouter = () => {
     new Configuation()
@@ -11,9 +12,8 @@ const AppRouter = () => {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Layout/>}>
-                    <Route index element={<Home/>}/>
-                    <Route path='/store' element={<Store/>}/>
-                    <Route path='/contact' element={<Contact/>}/>
+                    <Route index element={<Maintenance/>}/>
+                    <Route path='/discord' element={<Discord/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
